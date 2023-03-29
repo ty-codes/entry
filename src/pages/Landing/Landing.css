@@ -1,0 +1,24 @@
+
+.scroll-container {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scroll-container section {
+    height: 100%;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+h1 {
+    color: white;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
