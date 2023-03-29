@@ -5,8 +5,10 @@
 
 
 body {
-  overflow-y: scroll;
-  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
   font-family: "montserrat", Arial, Helvetica, sans-serif !important;
 }
 
