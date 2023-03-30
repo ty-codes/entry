@@ -1,27 +1,75 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+// import {Container, Offcanvas, NavDropdown} from "react-bootstrap";
 import { logo } from "../assets";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
-export default function Navbar({ theme }) {
+
+export default function NavBar({ theme }) {
+    // return (
+    //     <>
+    //         {/* <NavWrapper>
+    //             <Logo src={logo} alt="logo" />
+    //             <NavItems>
+    //                 <NavItem><Link to="/">Home</Link></NavItem>
+    //                 <NavOutlinedButton theme={theme} >
+    //                     Log in
+    //                 </NavOutlinedButton>
+    //                 <NavFilledButton theme={theme}>
+    //                     Sign up
+    //                 </NavFilledButton>
+    //             </NavItems>
+
+    //         </NavWrapper> */}
+    //         <>
+          
+    //       {['md'].map((expand) => (
+    //     <NavWrapper key={expand} bg="#111111" expand={expand} className="mb-0 nav__bar">
+    //       <Container fluid>
+    //         <Navbar.Brand href="/">               
+    //             <Logo src={logo} alt="logo" />
+    //         </Navbar.Brand>
+    //         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+    //         <Navbar.Offcanvas
+    //           id={`offcanvasNavbar-expand-${expand}`}
+    //           aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+    //           placement="end"
+    //         >
+    //           <Offcanvas.Header closeButton >
+    //             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+    //             <Logo src={logo} alt="logo" />
+
+    //             </Offcanvas.Title>
+    //           </Offcanvas.Header>
+    //           <Offcanvas.Body>
+    //             <Nav className="justify-content-end flex-grow-1 pe-3">
+    //               <Nav.Link className='link' href="/">Home</Nav.Link>                  
+    //               <NavOutlinedButton theme={theme} >
+    //                     Log in
+    //                 </NavOutlinedButton>
+    //                 <NavFilledButton theme={theme}>
+    //                     Sign up
+    //                 </NavFilledButton>
+    //              </Nav>
+                
+    //           </Offcanvas.Body>
+    //         </Navbar.Offcanvas>
+    //       </Container>
+    //     </NavWrapper>
+    //   ))}
+    //     </>
+    //     </>
+    // )
     return (
-        <Nav>
-            <Logo src={logo} alt="logo" />
-            <NavItems>
-                <NavItem><Link to="/">Home</Link></NavItem>
-                <NavOutlinedButton theme={theme} >
-                    Log in
-                </NavOutlinedButton>
-                <NavFilledButton theme={theme}>
-                    Sign up
-                </NavFilledButton>
-                <p>burger</p>
-            </NavItems>
-
-        </Nav>
+      <div>NavBar</div>
     )
 }
 
-const Nav = styled.nav`
+const NavWrapper = styled(NavBar)`
     position: fixed;
     background-color: transparent;
     height: 50px;
