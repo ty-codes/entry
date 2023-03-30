@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Landing from "./pages/Landing/Landing";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 // import Header from "./components/Header";
 // import Home from "./components/Home";
 // import Login from "./components/Login";
-import Maintenance from "./pages/Maintenance/Maintenance";
 import NoMatch from "./pages/NoMatch/NoMatch";
 
 
