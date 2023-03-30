@@ -1,7 +1,13 @@
-import Navbar from "./Navbar";
+import NavBar from "./Navbar";
 import NavOverlay from "./NavOverlay";
+import ValueStatement from "./ValueStatement";
+import GeneralCategory from "./GeneralCategory";
+import ProjectCategory from "./ProjectCategory";
 
 export {
-    Navbar,
-    NavOverlay
+    NavBar,
+    NavOverlay,
+    ValueStatement,
+    GeneralCategory,
+    ProjectCategory
 }
