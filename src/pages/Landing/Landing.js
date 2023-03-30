@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import {Navbar} from "../../components";
-import {hero, sliderShapeLong} from "../../assets";
+import { NavBar, ValueStatement, GeneralCategory, ProjectCategory } from "../../components";
+import { hero, sliderShapeLong } from "../../assets";
 import "./Landing.css";
 
 export default function Landing() {
     const theme = {
         entry: {
-           primaryColor: "linear-gradient(139.52deg,#6251C3 -73.08%,#2b0548 150.16%)",
-           background: "#f6e5f7",
-           secondaryColor: "#A800AB"
+            primaryColor: "linear-gradient(139.52deg,#6251C3 -73.08%,#2b0548 150.16%)",
+            background: "#f6e5f7",
+            secondaryColor: "#A800AB"
         },
         recruiter: {
             primaryColor: "linear-gradient(146.02deg,#00C27C 7.57%,#3288D3 146.47%)",
@@ -34,41 +34,41 @@ export default function Landing() {
     return (
         <>
             <ScrollWrapper>
-                <EntryCategory theme={theme.entry} />
-                <RecruiterCategory>
-                    <h1>The first section</h1>
+                <GeneralCategory theme={theme.entry} />
+                <ProjectCategory theme={theme.page3} />
 
-                </RecruiterCategory>
+                {/* <ValueStatement theme={theme.entry} /> */}
+
 
             </ScrollWrapper>
         </>
     )
 }
 
-const EntryCategory = ({theme}) => {
+// const EntryCategory = ({theme}) => {
 
-    return (
-        <EntryWrapper >
-            <Navbar  theme={theme} />
-            <Wrapper image={sliderShapeLong} theme={theme} >
-                <TextBox>
-                    <MainText>Connect with <span>Recruiters</span></MainText>
-                    <MainText>for <span>Projects</span> and <span>Jobs</span></MainText>
-                    <MainText>and Explore New Skills</MainText>
-                    <Subtitle>
-                        We are a community that connects talented entry-level developers
-                         and students to companies for skill-building opportunities.
-                    </Subtitle>
-                    <Button theme={theme}>
-                        Learn More
-                    </Button>
-                </TextBox>
+//     return (
+//         <EntryWrapper >
+//             <NavBar  theme={theme} />
+//             <Wrapper image={sliderShapeLong} theme={theme} >
+//                 <TextBox>
+//                     <MainText>Connect with <span>Recruiters</span></MainText>
+//                     <MainText>for <span>Projects</span> and <span>Jobs</span></MainText>
+//                     <MainText>and Explore New Skills</MainText>
+//                     <Subtitle>
+//                         We are a community that connects talented entry-level developers
+//                          and students to companies for skill-building opportunities.
+//                     </Subtitle>
+//                     <Button theme={theme}>
+//                         Learn More
+//                     </Button>
+//                 </TextBox>
 
-                <Hero src={hero} alt="hero" />
-            </Wrapper>
-        </EntryWrapper>
-    )
-}
+//                 <Hero src={hero} alt="hero" />
+//             </Wrapper>
+//         </EntryWrapper>
+//     )
+// }
 
 const ScrollWrapper = styled.div`
     // position: fixed;
@@ -90,14 +90,6 @@ const ScrollWrapper = styled.div`
     overflow-y: scroll;
     overflow-x: hidden;
 
-`;
-
-const EntryWrapper = styled.div`
-    height: 100%;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
 `;
 
 const Subtitle = styled.p`
@@ -171,25 +163,6 @@ const MainText = styled.h1`
         font-size: 23px;
     }
 `
-
-const RecruiterCategory = styled.div`
-    height: 100%;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-    background-color: #bbb;
-
-//   :nth-of-type(odd) {
-//     background: #111;
-//     color: #fff;
-//   }
-  
-//   :nth-of-type(even) {
-//     background: rgb(63, 27, 27);
-//     color: #fff;
-//   }
-`;
 
 const Button = styled.button`
     height: 40px;
