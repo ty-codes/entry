@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { convo, sliderShapeLong, testb, testc, teste, testf } from "../assets";
+import { hero, sliderShapeLong, testb, testc, teste, testf } from "../assets";
 import {Footer} from ".";
 
 export default function GeneralCategory({ theme }) {
@@ -18,7 +18,7 @@ export default function GeneralCategory({ theme }) {
                         Learn More
                     </Button>
                 </TextBox>
-                <Hero src={convo} alt="hero" />
+                <Hero src={hero} alt="hero" />
 
             </TextBoxWrapper>
             <Footer theme={theme} />
@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 
     @media (max-width: 768px) {
         scroll-snap-align: none;
-        height: auto;
+        height: 100%;
     }
 `;
 
@@ -55,7 +55,7 @@ const TextBoxWrapper = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
-        height: auto;
+        height: 100%;
     }
 `
 
