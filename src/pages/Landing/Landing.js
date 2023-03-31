@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { NavBar, ValueStatement, GeneralCategory, ProjectCategory } from "../../components";
-import { hero, sliderShapeLong } from "../../assets";
+import { NavBar, GeneralCategory, ProjectCategory } from "../../components";
+import { icon } from "../../assets";
 import "./Landing.css";
 
 export default function Landing() {
@@ -39,36 +39,22 @@ export default function Landing() {
 
                 {/* <ValueStatement theme={theme.entry} /> */}
 
+                <Footer theme={theme.entry}>
+                    <Left>
+                        <span>©  {new Date().getFullYear()} Skilful. All rights reserved.</span>
+                        <span><img style={{ width: "13px", height: "12px" }} src={icon} alt="logo" /></span>
+                    </Left>
+                    <Right>
+                        <span>Contact</span>
+                        <span>Privacy Policy</span>
+                        <span>Terms of use</span>
 
+                    </Right>
+                </Footer>
             </ScrollWrapper>
         </>
     )
 }
-
-// const EntryCategory = ({theme}) => {
-
-//     return (
-//         <EntryWrapper >
-//             <NavBar  theme={theme} />
-//             <Wrapper image={sliderShapeLong} theme={theme} >
-//                 <TextBox>
-//                     <MainText>Connect with <span>Recruiters</span></MainText>
-//                     <MainText>for <span>Projects</span> and <span>Jobs</span></MainText>
-//                     <MainText>and Explore New Skills</MainText>
-//                     <Subtitle>
-//                         We are a community that connects talented entry-level developers
-//                          and students to companies for skill-building opportunities.
-//                     </Subtitle>
-//                     <Button theme={theme}>
-//                         Learn More
-//                     </Button>
-//                 </TextBox>
-
-//                 <Hero src={hero} alt="hero" />
-//             </Wrapper>
-//         </EntryWrapper>
-//     )
-// }
 
 const ScrollWrapper = styled.div`
     // position: fixed;
@@ -89,6 +75,12 @@ const ScrollWrapper = styled.div`
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     overflow-x: hidden;
+
+    @media (max-width: 768px) {
+        scroll-snap-type: none;
+    overflow: auto;
+    overflow-y: scroll;
+    }
 
 `;
 
@@ -144,40 +136,37 @@ const Hero = styled.img`
     }
 `;
 
-const MainText = styled.h1`
-    color: #6669c5;
-    font-weight: 900;
-    font-size: 42px;
-    // color: #1e1e1e;
 
-    & span {
-        display:inline-block;
-        white-space: nowrap;
-    }
+const Footer = styled.footer`
+    height: 40px;
+    background: ${(props) => props.theme.primaryColor};
+    color: #ddd;
+    font-size: 10px;
+    font-weight: lighter;
+    display: none;
+    
 
-    @media (max-width: 550px) {
-        font-size: 30px;
-    }
+    @media (max-width: 768px) {
+        display: flex;
+        padding: 12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+`;
 
-    @media (max-width: 400px) {
-        font-size: 23px;
+const Left = styled.div`
+   span {
+    margin-right: 1em;
+   }
+
+   @media (max-width: 768px) {
+    margin: 0.5em 0;
     }
 `
 
-const Button = styled.button`
-    height: 40px;
-    width: 90px;
-    border: none;
-    background: ${(props) => props.theme.primaryColor};
-    color: white;
-    border-radius: 6px;
-    font-weight: 700;
-    padding: 16px 25px;
-    min-width: 190px;
-    height: 53px;
-    font-size: 16px;
-    line-height: 19px;
-    box-shadow: none!important;
-    transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-`;
+const Right = styled.div`
+    span {
+        margin-right: 1em;
+   }
+`
