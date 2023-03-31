@@ -12,25 +12,25 @@ export default function ProjectCategory({ theme }) {
                         Work with talents from universities and communities
                     </Subtitle>
                     <BoxWrapper>
-                        <Box>
+                        <Box theme={theme}>
                             <img src={postProject} alt="post-a-project" />
                             <strong>Projects</strong>
                             <p>
                                 For startups with defined tasks looking for
                                 short-term project help and looking to connect
-                                with Business and STEAM students.
+                                with talented developers and designers.
                               </p>
                         </Box>
-                        <Box>
+                        <Box theme={theme}>
                         <img src={jobsAndInternships} alt="post-a-project" />
                             <strong>Jobs and Internships</strong>
                             <p>
-                                Expand your pipelines a get connected with a
-                                curated qualified pool of students and their
+                                Expand your pipelines and get connected with a
+                                curated qualified pool of students and entry-level talents and their
                                 skill insights that fits the role.
                               </p>
                         </Box>
-                        <Box>
+                        <Box theme={theme}>
                         <img src={firstOpportunity} alt="post-a-project" />
 
                             <strong>1st Opportunity</strong>
@@ -67,7 +67,12 @@ const Box = styled.li`
     padding: 20px;
     border-radius: 10px;
     height: 300px;
-    // margin: 1em;
+
+
+    &:hover {
+        border: 10px solid #FFBE01;
+        transition: 1s ease-in;
+    }
 
 
 
