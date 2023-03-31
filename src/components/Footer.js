@@ -24,8 +24,8 @@ export default function Footer({ theme }) {
 const Wrapper = styled.footer`
     height: 40px;
     background: ${(props) => props.theme.primaryColor};
-    color: #ddd;
-    font-size: 12px;
+    color: #fafafa;
+    font-size: 11px;
     font-weight: lighter;
     display: flex;
     justify-content: space-around;
