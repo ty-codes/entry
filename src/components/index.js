@@ -1,15 +1,15 @@
 import NavBar from "./Navbar";
 import NavOverlay from "./NavOverlay";
-import ValueStatement from "./ValueStatement";
 import GeneralCategory from "./GeneralCategory";
 import ProjectCategory from "./ProjectCategory";
+import ConnectCategory from "./ConnectCategory";
 import Footer from "./Footer";
 
 export {
     NavBar,
     NavOverlay,
-    ValueStatement,
     GeneralCategory,
     ProjectCategory,
+    ConnectCategory,
     Footer
 }
