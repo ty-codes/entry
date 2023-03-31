@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { firstOpportunity, postProject, sliderShapeYellow, jobsAndInternships } from "../assets";
+import {Footer} from ".";
 
 export default function ProjectCategory({ theme }) {
     return (
@@ -42,6 +43,7 @@ export default function ProjectCategory({ theme }) {
                     </BoxWrapper>
                 </TextBox>
             </TextBoxWrapper>
+            <Footer theme={theme} />
         </Wrapper>
     )
 };
@@ -54,7 +56,7 @@ const BoxWrapper = styled.ul`
     width: 100%;
 
     @media (max-width: 800px) {
-       justify-content: center
+       justify-content: center;
     }
     
 `;
@@ -98,6 +100,11 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
+
+    @media (max-width: 768px) {
+        scroll-snap-align: none;
+        height: auto;
+    }
 `;
 
 const TextBoxWrapper = styled.div`
@@ -109,13 +116,14 @@ const TextBoxWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // height: calc(100% - 50px);
+    height: calc(100% - 40px);
     // padding-top: 50px;
-    height: 100%;
     align-items: center;
 
     @media (max-width: 768px) {
         flex-direction: column;
+        height: auto;
+        padding: 3em 0;
     }
 
     @media (max-width: 800px) {
