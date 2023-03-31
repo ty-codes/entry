@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavBar, GeneralCategory, ProjectCategory } from "../../components";
+import { NavBar, GeneralCategory, ProjectCategory, ConnectCategory } from "../../components";
 import { icon } from "../../assets";
 import "./Landing.css";
 
@@ -21,13 +21,13 @@ export default function Landing() {
             secondaryColor: "#FFBE01"
         },
         page4: {
-            primaryColor: "#fef1eb",
-            background: "linear-gradient(157.89deg,#F26835 21.79%,#FFBE01 180.26%)",
+            primaryColor: "linear-gradient(157.89deg,#F26835 21.79%,#FFBE01 180.26%)",
+            background: "#fef1eb",
             secondaryColor: "#F26835"
         },
         page5: {
-            primaryColor: "#e5eaee",
-            background: "linear-gradient(117.24deg,#3288D3 -7.43%,#00315C 125.69%)",
+            primaryColor: "linear-gradient(117.24deg,#3288D3 -7.43%,#00315C 125.69%)",
+            background: "#e5eaee",
             secondaryColor: "#00315C"
         }
     }
@@ -36,6 +36,7 @@ export default function Landing() {
             <ScrollWrapper>
                 <GeneralCategory theme={theme.entry} />
                 <ProjectCategory theme={theme.page3} />
+                <ConnectCategory theme={theme.page5} />
 
                 {/* <ValueStatement theme={theme.entry} /> */}
 
