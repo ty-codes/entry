@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { sliderShapeLong, hero } from "../assets";
+import { convo, sliderShapeLong, testb, testc, teste, testf } from "../assets";
+import {Footer} from ".";
 
 export default function GeneralCategory({ theme }) {
     return (
@@ -11,15 +12,16 @@ export default function GeneralCategory({ theme }) {
                     <MainText>and Explore New Skills</MainText>
                     <Subtitle>
                         We are a community that connects talented entry-level developers
-                        and students to companies for skill-building opportunities.
+                        and designers to companies for skill-building opportunities.
                     </Subtitle>
                     <Button theme={theme}>
                         Learn More
                     </Button>
                 </TextBox>
-                <Hero src={hero} alt="hero" />
+                <Hero src={convo} alt="hero" />
 
             </TextBoxWrapper>
+            <Footer theme={theme} />
         </Wrapper>
     )
 }
@@ -30,10 +32,16 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
+
+    @media (max-width: 768px) {
+        scroll-snap-align: none;
+        height: auto;
+    }
 `;
 
 const TextBoxWrapper = styled.div`
-    background: ${(props) => props.theme.background};
+    // background: ${(props) => props.theme.background};
+    background: white;
     background-image: url(${props => props.image});
     background-repeat: no-repeat;
     background-position: center;
@@ -41,13 +49,13 @@ const TextBoxWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // height: calc(100% - 50px);
+    height: calc(100% - 40px);
     // padding-top: 50px;
-    height: 100%;
     align-items: center;
 
     @media (max-width: 768px) {
         flex-direction: column;
+        height: auto;
     }
 `
 
@@ -59,7 +67,7 @@ const Subtitle = styled.p`
 
     @media (max-width: 550px) {
         font-size: 15px;
-        width: 80%
+        width: 80%;
     }
 `;
 
@@ -78,10 +86,17 @@ const TextBox = styled.div`
 const Hero = styled.img`
     height: 80%;
     width: 55%;
+    // border-radius: 50%;
+    // padding-right: 20px;
+    // object-fit: cover;
 
     @media (max-width: 768px) {
         width: 70%;
         height: 50%;
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 60%;
     }
 `;
 
