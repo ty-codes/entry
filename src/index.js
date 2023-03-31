@@ -1,13 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
+import NavBar from "./Navbar";
+import NavOverlay from "./NavOverlay";
+import ValueStatement from "./ValueStatement";
+import GeneralCategory from "./GeneralCategory";
+import ProjectCategory from "./ProjectCategory";
+import Footer from "./Footer";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  );
+export {
+    NavBar,
+    NavOverlay,
+    ValueStatement,
+    GeneralCategory,
+    ProjectCategory,
+    Footer
+}
